@@ -92,13 +92,13 @@ html {
 
 .modal {
   display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
+  position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: #474e5d; /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 250px;
 }
@@ -147,30 +147,18 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-  background-color: #5aa17f;
-  color: white;
+  background-color: #BEE4D7;
+  color: black;
   padding: 20px 20px;
   margin: 8px 8px;
   border: none;
   cursor: pointer;
   width: 25%;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 button:hover {
   opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
 }
 
 /* The Modal (background) */
@@ -184,6 +172,7 @@ button:hover {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: #474e5d;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 50px;
 }
 
@@ -201,22 +190,6 @@ hr {
   margin-bottom: 25px;
 }
 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
 /* Clear floats */
 .clearfix::after {
   content: "";
@@ -224,6 +197,9 @@ hr {
   display: table;
 }
 
+.cancelbtn {
+  background-color: red
+}
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
@@ -318,16 +294,16 @@ h1 {
   <section class="counters" style="background-color: #33292D">
   			<div class="container">
   				<div>
-  					<div class="counter" style="color:#5aa17f">1500+</div>
-  					<h3><b style="color:#5aa17f">Users</b></h3>
+  					<div class="counter" style="color:#bfe5d9">1500+</div>
+  					<h3><b style="color:#bfe5d9  ">Users</b></h3>
   				</div>
   				<div>
-  					<div class="counter" style="color:#5aa17f">100+</div>
-  					<h3><b style="color:#5aa17f">Private Groups</b></h3>
+  					<div class="counter" style="color:#bfe5d9">100+</div>
+  					<h3><b style="color:#bfe5d9">Private Groups</b></h3>
   				</div>
   				<div>
-  					<div class="counter" style="color:#5aa17f">$10,000+</div>
-  					<h3><b style="color:#5aa17f">Investment</b></h3>
+  					<div class="counter" style="color:#bfe5d9">$10,000+</div>
+  					<h3><b style="color:#bfe5d9">Investment</b></h3>
   				</div>
     </section>
   </div>

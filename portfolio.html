@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+
+</head>
+<body>
+    <style>
+        body {
+          font-family: Arial;
+          color: white;
+        }
+        
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+        }
+        
+        .left {
+          left: 0;
+          background-color: #35244f;
+        }
+        
+        .right {
+          right: 0;
+          background-color: #103b5c;
+        }
+        
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        
+        .centered img {
+          width: 150px;
+          border-radius: 50%;
+        }
+
+        #hold-title
+        {
+            color: rgb(77, 184, 109);
+        }
+
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  /* border: 1px solid ; */
+  text-align: left;
+  padding: 8px;
+}
+
+.info
+{
+    font-size:40px;
+    color: rgb(77, 184, 109);
+    background-color: #103b5c;
+}
+tr:nth-child(even) {
+  background-color: rgb(22, 22, 105);
+  color: aliceblue;
+}
+
+.back
+{
+    height: 100px;
+    width: 300px !important;
+}
+
+tr:nth-child(odd)
+{
+    background-color: rgb(77, 184, 109);
+}
+        </style>
+        </head>
+        <body>
+        
+        <div class="split left">
+          <div class="centered">
+            <div id="piechart"></div>
+            <div class="info">
+                <h3>Your Stake: $30,000</h3>
+                <h3>Total Investments: $140,000</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="split right">
+          <div class="centered">
+
+<div class="holdings">
+<h2 id="hold-title">Current Holdings</h2>
+
+<table>
+  <tr>
+    <th>Company/Fund</th>
+    <th>Symbol</th>
+    <th>Amount</th>
+    <th>Sector</th>
+
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    <td>Germany</td>
+
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div class="back" style="margin-left: 90%;">
+    <button src="template.html" style="width: 300px;height: 170px;background-color: aliceblue;color:#4db86d;border:none;font-size: 50px;">Back</button>
+</div>
+            
+          </div>
+        </div>
+             
+        </body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Stocks', 120000],
+      ['Crypto', 60000],
+      ['Mutual Funds', 40000],
+      ['ETFS', 20000],
+      ['Cash', 80000]
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'legend':'left','title':'Group Portfolio', 'titleTextStyle':{ color: "Green",
+  fontName: "Sans Serif",
+  fontSize: "40",
+  bold: true,
+  italic: false }
+    ,'width':800, 'height':800,'is3D':true,pieHold:0.4,colors:['#0c5928','#3b2ce6','#5dc972','#450e0a',"#228f82"],'backgroundColor':"#12153d","legend":{position: 'top', textStyle: {color: 'white', fontSize: 16}}};
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+    </script>
+</html>
